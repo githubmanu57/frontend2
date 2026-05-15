@@ -1,105 +1,155 @@
 *{
-      margin:0;
-      padding:0;
-      box-sizing:border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
     body{
       font-family: 'Poppins', sans-serif;
-      background:#f4f4f4;
-      color:#333;
-      line-height:1.6;
+      background-color: #f2f7f2;
+      color: #333;
+      line-height: 1.6;
     }
 
     /* Header */
     .blog-header{
-      background:#222;
-      color:white;
-      text-align:center;
-      padding:25px;
+      background: linear-gradient(to right, #2e7d32, #66bb6a);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
     }
 
     .blog-header h1{
-      font-size:40px;
+      font-size: 2.8rem;
+      margin-bottom: 10px;
     }
 
-    /* Layout */
+    .blog-header p{
+      font-size: 1.1rem;
+    }
+
+    /* Main Layout */
     .container{
-      display:flex;
-      gap:20px;
-      padding:20px;
+      display: flex;
+      gap: 20px;
+      padding: 20px;
     }
 
-    /* Blog Section */
+    /* Blog Content */
     .blog-content{
-      flex:3;
-      display:flex;
-      flex-wrap:wrap;
-      gap:20px;
+      flex: 3;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
     }
 
-    /* Blog Card */
+    /* Blog Cards */
     .blog-card{
-      background:white;
-      border:1px solid #ddd;
-      border-radius:10px;
-      overflow:hidden;
-      width:calc(50% - 10px);
-      padding:15px;
-      transition:0.3s;
+      background: white;
+      border: 1px solid #dcdcdc;
+      border-radius: 12px;
+      overflow: hidden;
+      width: calc(50% - 10px);
+
+      /* Box Model */
+      padding-bottom: 15px;
+      margin-bottom: 20px;
+
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
+    /* Hover Effect */
     .blog-card:hover{
-      transform:translateY(-5px);
-      box-shadow:0 4px 15px rgba(0,0,0,0.2);
+      transform: translateY(-6px);
+      box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
     .blog-card img{
-      width:100%;
-      height:200px;
-      object-fit:cover;
-      border-radius:8px;
-      margin-bottom:10px;
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
     }
 
-    .blog-card h2{
-      margin-bottom:10px;
-      color:#222;
+    .blog-card .card-content{
+      padding: 15px;
     }
 
-    .blog-card p{
-      margin-bottom:15px;
+    /* Descendant Selectors */
+    .card-content h2{
+      margin-bottom: 10px;
+      color: #2e7d32;
     }
 
-    .blog-card a{
-      text-decoration:none;
-      color:#0077ff;
-      font-weight:600;
+    .card-content p{
+      margin-bottom: 15px;
+      font-size: 14px;
     }
 
-    .blog-card a:hover{
-      color:#ff6600;
+    .read-more{
+      text-decoration: none;
+      background: #2e7d32;
+      color: white;
+      padding: 8px 15px;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background 0.3s;
     }
 
-   
+    .read-more:hover{
+      background: #1b5e20;
+    }
+
+    /* Sidebar */
+    .sidebar{
+      flex: 1;
+      background: white;
+      border: 1px solid #dcdcdc;
+      border-radius: 12px;
+      padding: 20px;
+      height: fit-content;
+    }
+
+    .sidebar h3{
+      margin-bottom: 15px;
+      color: #2e7d32;
+    }
+
+    .sidebar ul{
+      list-style: none;
+    }
+
+    .sidebar ul li{
+      margin-bottom: 12px;
+    }
+
+    .sidebar ul li a{
+      text-decoration: none;
+      color: #388e3c;
+      transition: color 0.3s;
+    }
+
+    .sidebar ul li a:hover{
+      color: #1b5e20;
+    }
 
     /* Footer */
-    .blog-footer{
-      background:#222;
-      color:white;
-      text-align:center;
-      padding:15px;
-      margin-top:20px;
+    .footer{
+      background: #2e7d32;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      margin-top: 20px;
     }
 
     /* Responsive Design */
-    @media(max-width:768px){
+    @media(max-width: 768px){
 
       .container{
-        flex-direction:column;
+        flex-direction: column;
       }
 
       .blog-card{
-        width:100%;
+        width: 100%;
       }
     }
